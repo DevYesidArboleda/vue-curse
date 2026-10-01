@@ -24,7 +24,9 @@ const routerLinks: RouterLink[]=pokemonRouter.children!.map( ({name, props, path
 
         <NavBar :links="routerLinks" secondary/>
     </div>
-    <RouterView />
+    <Suspense>
+        <RouterView />
+    </Suspense>
 </template>
 
 <style lang="scss" scoped>
